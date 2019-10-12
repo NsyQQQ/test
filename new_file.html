@@ -6,119 +6,81 @@
 		<title></title>
 		
 		<link rel="stylesheet" href="css/page1.css" />
+		<link rel="stylesheet" href="css/page2.css" />
 		
+	
 	</head>
 	
 	<style type="text/css">
-		#second{
+		#third{
+			display: none;
 			width: 100%;
 			height: 650px;
-			display: none;
-			animation-name: name2;
-			animation-duration: 0.1s;
 		}
-		
-		@keyframes name1{
-			from{background-color: floralwhite;}
-			to{background-color: white;}
-		}
-		
-		.s_img1{
+		.t_img1{
 			z-index: -1;
 			position: absolute;
 			width: 100%;
 		}
-		.s_img2{
+		.t_img2{
 			position: absolute;
 			width: 10%;
 		}
-		.s_img3{
-			position: absolute;
-			margin-left: 90%;
-			width: 10%;
-		}
-		
-		#s_div3{
+		.t_video{
 			z-index: 1;
 			position: absolute;
 			width: 80%;
 			margin-left: 10%;
 			margin-top: 25%;
 		}
-		
-		#s_div3 video{
+		.t_video video{
 			border-radius: 20px;
 		}
 		
-		#hk{
-			position: absolute;
-			width: 100%;
-		}
-		
-		#hk .hua{
+		.t_btn{
 			z-index: 1;
 			position: absolute;
 			width: 100%;
 			height: 20%;
-		}
-		
-		#hk .hua img{
-			width: 80%;
-			margin-top: 145%;
-			margin-left: 10%;
-		}
-		
-		.shou{
-			position: absolute;
-			z-index: 3;
-			width: 15%;
-			margin-top: 26%;
-			margin-left: 17%;
-			animation-name: page2_kf2;
-			animation-duration: 2s;
-			animation-iteration-count: infinite;
-			animation-timing-function: ease;
-		}
-		.shou img{
-			width: 100%;
-		}
-		
-		@keyframes page2_kf2{
-			from{margin-left: 17%;}
-			to{margin-left: 80%;}
-		}
-		
-		video::-webkit-media-controls{
-		    display:none !important;
-		}
-
-		.video_1{
-			width: 80%;
-			margin-left: 10%;
-		}
-		.video_1 video{
-			margin-top: 25%;
-			border-radius: 20px;
-		}
-		.progress{
-			display: inline-block;
-			width: 80%;
-			height: 4.125rem;
-			background-image: url(img/男女/男女.png);
-			background-repeat: no-repeat;
-			background-size: 100%;
-			margin-left: 10%;
-			margin-top: 10%;
-		}
-		.timrBar{
-			display: inline-block;
-			background-image: url(img/男女/黑男青年.ai.png);
+			margin-top: 140%;
+			background: url(img/按钮/下载按钮循环-11/下载按钮循环_00000.png) no-repeat;
 			background-size: cover;
-			height: 4.125rem;
-			width: 22%;
-			border-radius: 4.125rem;
-		}
 
+			animation-name: page3_kf1;
+			animation-duration: 1.2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		.t_font{
+			text-align: center;
+			font-size: 22px;
+			margin-top: 10%;
+			color: white;
+			
+			animation-name: page3_kf2;
+			animation-duration: 1.2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		
+		@keyframes page3_kf1{
+			0%{background: url(img/按钮/下载按钮循环-11/下载按钮循环_00000.png) no-repeat;background-size: cover;}
+			10%{background: url(img/按钮/下载按钮循环-11/下载按钮循环_00001.png) no-repeat;background-size: cover;}
+			20%{background: url(img/按钮/下载按钮循环-11/下载按钮循环_00002.png) no-repeat;background-size: cover;}
+			30%{background: url(img/按钮/下载按钮循环-11/下载按钮循环_00003.png) no-repeat;background-size: cover;}
+			40%{background: url(img/按钮/下载按钮循环-11/下载按钮循环_00004.png) no-repeat;background-size: cover;font-size: 22px;}
+			50%{background: url(img/按钮/下载按钮循环-11/下载按钮循环_00005.png) no-repeat;background-size: cover;}
+			60%{background: url(img/按钮/下载按钮循环-11/下载按钮循环_00006.png) no-repeat;background-size: cover;}
+			70%{background: url(img/按钮/下载按钮循环-11/下载按钮循环_00007.png) no-repeat;background-size: cover;font-size: 18px;}
+			80%{background: url(img/按钮/下载按钮循环-11/下载按钮循环_00008.png) no-repeat;background-size: cover;}
+			95%{background: url(img/按钮/下载按钮循环-11/下载按钮循环_00009.png) no-repeat;background-size: cover;}
+			100%{background: url(img/按钮/下载按钮循环-11/下载按钮循环_00010.png) no-repeat;background-size: cover;font-size: 22px;}
+		}
+		@keyframes page3_kf2{
+			40%{font-size: 22px;}
+			70%{font-size: 18px;}
+			100%{font-size: 22px;}
+		}
 	</style>
 
 	<body>
@@ -127,8 +89,8 @@
 		<div id="first">
 			<!-- 背景图片 -->
 			<img class="img1" src="img/底图.png" />
-			<!-- 关闭按钮 -->
-			<img class="img2" src="img/关闭按钮.png" />
+			<!-- 返回按钮 -->
+			<img class="s_img2" src="img/返回.png" />
 			<!-- 顶部文字 -->
 			<div class="top_font">
 				Gender Swap
@@ -137,47 +99,61 @@
 			<div id="div1">
 				<video width="100%" autoplay="autoplay" loop="loop">
 				  <source src="video/白人男女-810-1140.mp4" type="video/mp4">
-				Your browser does not support the video tag.
 				</video>
 			</div>
 			<!-- 底部按钮 -->
-			<div id="div2">
-				<div class="btn">
-					<button class="btn1" onclick="divSW()">
-						Take Photos
-					</button>
-				</div>
+			<div class="btn">
+				<button class="btn1" onclick="divSW1()">
+					Take Photos
+				</button>
 			</div>
 		</div>
+		
 		<!-- 第二个页面 -->
 		<div id="second" id="video-warp">
 			<!-- 背景图片 -->
 			<img class="s_img1" src="img/底图.png" />
-			<!-- 返回和关闭按钮 -->
-			<img class="s_img2" onclick="divSM()" src="img/返回.png" />
-			<img class="s_img3" src="img/关闭按钮.png" />
+			<!-- 返回按钮 -->
+			<img class="s_img2" onclick="divSW2()" src="img/返回.png" />
 			<!-- 视频 -->
 			<div class="video_1">
-				<video id="video" width="100%"  preload="auto" controls="controls">
+				<video id="video" width="100%" preload="auto" controls="controls">
 					<source src="video/黑人男女-810-1140.mp4"></source>
 				</video>
 			</div>
 			<!-- 手指 -->
-			<div class="shou">
+			<div class="shou" id="shou">
 				<img src="img/手指.png" />
 			</div>
 			<!-- 滑块 -->
 			<div class="progress">
 				<div class="timrBar"></div>
 			</div>
-
 		</div>
 		
+		<!-- 第三个页面 -->
+		<div id="third">
+			<img class="t_img1" src="img/底图.png" />
+			<img class="t_img2" onclick="divSW3()" src="img/返回.png" />
+			
+			<div class="t_video">
+				<video width="100%" autoplay="autoplay" loop="loop">
+				  <source src="video/黑人男女-对比循环.mp4" type="video/mp4">
+				</video>
+			</div>
+			
+			<div class="t_btn">
+				<div class="t_font">
+					立即下载
+				</div>
+			</div>
+		</div>
+	
 	</body>
 	
 	<script type="text/javascript">
 		// 第一个页面跳转到第二个页面
-		function divSW() {
+		function divSW1() {
 			var dv1 = document.getElementById( "first" );
 			var dv2 = document.getElementById( "second" );
 			var hide = true;
@@ -190,10 +166,36 @@
 				dv2.style.display = "none"; 
 		        hide = true;
 		    }
+			//播放闪屏动画
 			dv2.style.animationName="name1";
+			
+			//过5秒钟之后视频自动播放
+			setTimeout(function(){
+				//手指消失
+				var shou=document.getElementById("shou");
+				shou.style.display = "none";
+				//播放视频
+				v.video.play();
+				//视频播放完之后跳转到下一个页面
+				v.video.addEventListener("ended",function(){
+					var dv2 = document.getElementById( "second" );
+					var dv3 = document.getElementById( "third" );
+					var hide = true;
+					if( hide ) {
+					   dv2.style.display = "none"; 
+					   dv3.style.display = "block";
+					   hide = false;
+					} else {
+					    dv2.style.display = "block";
+						dv3.style.display = "none"; 
+					    hide = true;
+					}
+				});
+			},5000);
+			
 		}
 		//第二个页面返回第一个页面
-		function divSM() {
+		function divSW2() {
 			var dv1 = document.getElementById( "first" );
 			var dv2 = document.getElementById( "second" );
 			var hide = true;
@@ -207,7 +209,22 @@
 		        hide = true;
 		    }
 		}
-		
+		//第三个页面返回第二个页面
+		function divSW3() {
+			var dv2 = document.getElementById( "second" );
+			var dv3 = document.getElementById( "third" );
+			var hide = true;
+		    if( hide ) {
+		       dv2.style.display = "block"; 
+			   dv3.style.display = "none";
+		       hide = false;
+		    } else {
+		        dv2.style.display = "none";
+				dv3.style.display = "block"; 
+		        hide = true;
+		    }
+		}
+	
 		/* 进度条控制视频播放 自定义进度条 进度条可拖拽 */
 
 		var v={
@@ -248,7 +265,18 @@
 					if(progressDrag){
 						progressDrag=false;
 						if(v.timrBar.style.transform=="translateX(355%)"){
-							alert("111");
+							var dv2 = document.getElementById( "second" );
+							var dv3 = document.getElementById( "third" );
+							var hide = true;
+							if( hide ) {
+							   dv2.style.display = "none"; 
+							   dv3.style.display = "block";
+							   hide = false;
+							} else {
+							    dv2.style.display = "block";
+								dv3.style.display = "none"; 
+							    hide = true;
+							}
 						}else{
 							v.timrBar.style.transform="translateX(0%)";
 							v.video.currentTime=0;
