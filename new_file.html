@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width">
+		<title></title>
+		
+		<link rel="stylesheet" href="css/page1.css" />
+		
+	</head>
+	
+	<style type="text/css">
+		#second{
+			width: 100%;
+			height: 650px;
+			display: none;
+			animation-name: name2;
+			animation-duration: 0.1s;
+		}
+		
+		@keyframes name1{
+			from{background-color: floralwhite;}
+			to{background-color: white;}
+		}
+		
+		.s_img1{
+			z-index: -1;
+			position: absolute;
+			width: 100%;
+		}
+		.s_img2{
+			position: absolute;
+			width: 10%;
+		}
+		.s_img3{
+			position: absolute;
+			margin-left: 90%;
+			width: 10%;
+		}
+		
+		#s_div3{
+			z-index: 1;
+			position: absolute;
+			width: 80%;
+			margin-left: 10%;
+			margin-top: 25%;
+		}
+		
+		#s_div3 video{
+			border-radius: 20px;
+		}
+		
+		#hk{
+			position: absolute;
+			width: 100%;
+		}
+		
+		#hk .hua{
+			z-index: 1;
+			position: absolute;
+			width: 100%;
+			height: 20%;
+		}
+		
+		#hk .hua img{
+			width: 80%;
+			margin-top: 145%;
+			margin-left: 10%;
+		}
+		
+		.shou{
+			position: absolute;
+			z-index: 3;
+			width: 15%;
+			margin-top: 26%;
+			margin-left: 17%;
+			animation-name: page2_kf2;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease;
+		}
+		.shou img{
+			width: 100%;
+		}
+		
+		@keyframes page2_kf2{
+			from{margin-left: 17%;}
+			to{margin-left: 80%;}
+		}
+		
+		video::-webkit-media-controls{
+		    display:none !important;
+		}
+
+		.video_1{
+			width: 80%;
+			margin-left: 10%;
+		}
+		.video_1 video{
+			margin-top: 25%;
+			border-radius: 20px;
+		}
+		.progress{
+			display: inline-block;
+			width: 80%;
+			height: 4.125rem;
+			background-image: url(img/男女/男女.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			margin-left: 10%;
+			margin-top: 10%;
+		}
+		.timrBar{
+			display: inline-block;
+			background-image: url(img/男女/黑男青年.ai.png);
+			background-size: cover;
+			height: 4.125rem;
+			width: 22%;
+			border-radius: 4.125rem;
+		}
+
+	</style>
+
+	<body>
+		
+		<!-- 第一个页面 -->
+		<div id="first">
+			<!-- 背景图片 -->
+			<img class="img1" src="img/底图.png" />
+			<!-- 关闭按钮 -->
+			<img class="img2" src="img/关闭按钮.png" />
+			<!-- 顶部文字 -->
+			<div class="top_font">
+				Gender Swap
+			</div>
+			<!-- 中部视频 -->
+			<div id="div1">
+				<video width="100%" autoplay="autoplay" loop="loop">
+				  <source src="video/白人男女-810-1140.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
+			</div>
+			<!-- 底部按钮 -->
+			<div id="div2">
+				<div class="btn">
+					<button class="btn1" onclick="divSW()">
+						Take Photos
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- 第二个页面 -->
+		<div id="second" id="video-warp">
+			<!-- 背景图片 -->
+			<img class="s_img1" src="img/底图.png" />
+			<!-- 返回和关闭按钮 -->
+			<img class="s_img2" onclick="divSM()" src="img/返回.png" />
+			<img class="s_img3" src="img/关闭按钮.png" />
+			<!-- 视频 -->
+			<div class="video_1">
+				<video id="video" width="100%" controls="controls">
+					<source src="video/黑人男女-810-1140.mp4"></source>
+				</video>
+			</div>
+			<!-- 手指 -->
+			<div class="shou">
+				<img src="img/手指.png" />
+			</div>
+			<!-- 滑块 -->
+			<div class="progress">
+				<div class="timrBar"></div>
+			</div>
+
+		</div>
+		
+	</body>
+	
+	<script type="text/javascript">
+		// 第一个页面跳转到第二个页面
+		function divSW() {
+			var dv1 = document.getElementById( "first" );
+			var dv2 = document.getElementById( "second" );
+			var hide = true;
+		    if( hide ) {
+		       dv1.style.display = "none"; 
+			   dv2.style.display = "block";
+		       hide = false;
+		    } else {
+		        dv1.style.display = "block";
+				dv2.style.display = "none"; 
+		        hide = true;
+		    }
+			dv2.style.animationName="name1";
+		}
+		//第二个页面返回第一个页面
+		function divSM() {
+			var dv1 = document.getElementById( "first" );
+			var dv2 = document.getElementById( "second" );
+			var hide = true;
+		    if( hide ) {
+		       dv1.style.display = "block"; 
+			   dv2.style.display = "none";
+		       hide = false;
+		    } else {
+		        dv1.style.display = "none";
+				dv2.style.display = "block"; 
+		        hide = true;
+		    }
+		}
+		
+		/* 进度条控制视频播放 自定义进度条 进度条可拖拽 */
+
+		var v={
+			video: document.getElementById("video"), //容器框
+			progress: document.getElementsByClassName("progress")[0], //进度条容器
+			timrBar: document.getElementsByClassName("timrBar")[0], //进度条
+			warp: document.getElementById("video-warp") //视频区域距左边的距离
+		};
+		
+		v.video.onloadedmetadata = function(){
+			//进度条跟随
+			v.video.ontimeupdate = function() {
+				//获取视频当前播放时间
+			    var currentTime = v.video.currentTime;
+				//获取视频总时间
+			    var duration = v.video.duration;
+				//视频当前播放时间的百分比
+			    var percent = currentTime / duration * 100;
+			    /* v.timrBar.style.width = percent + "%" ; */
+				//通过百分比调整进度条位置
+				v.timrBar.style.transform = "translateX("+ percent*3.55 + "%"+")";
+			}
+			//进度条获取坐标 调用触摸事件 实现拖拽
+			var enableProgressDrag = function(e) {
+				//进度条可拖放状态
+			    var progressDrag = false;
+				//手指触摸  按下手指时
+			    v.progress.ontouchstart = function(e) {
+			        progressDrag = true;
+			        updateprogress(e.touches[0].pageX/* - v.warp.offsetLeft */);
+			    }
+				//手指触摸  松开手指时
+			    document.ontouchend = function(e) {
+			        /* if(progressDrag) {
+			            progressDrag = false;
+			            updateprogress(e.touches[0].pageX - v.warp.offsetLeft);
+			        } */
+					if(progressDrag){
+						progressDrag=false;
+						if(v.timrBar.style.transform=="translateX(355%)"){
+							alert("111");
+						}else{
+							v.timrBar.style.transform="translateX(0%)";
+							v.video.currentTime=0;
+						}
+					}
+			    }
+				//手指触摸  移动手指时
+			    v.progress.ontouchmove = function(e) {
+			        if(progressDrag) {
+			            updateprogress(e.touches[0].pageX /* - v.warp.offsetLeft */);
+			        }
+			    }
+			};
+
+			enableProgressDrag();
+			//进度条可拖拽
+			function updateprogress(x) {
+			    var percent = 100 * (x - v.progress.offsetLeft) / v.progress.offsetWidth;
+			    if(percent > 100) {
+			        percent = 100;
+			    }
+			    if(percent < 0) {
+			        percent = 0;
+			    }
+			    /* v.timrBar.style.width = percent + "%" ; */
+				v.timrBar.style.transform = "translateX("+ percent*3.55 + "%"+")";
+			    v.video.currentTime = v.video.duration * percent / 100;
+			}
+		}
+
+	</script>
+</html>

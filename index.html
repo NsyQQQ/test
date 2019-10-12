@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width">
+		<title></title>
+		
+		<link rel="stylesheet" href="css/page1.css" />
+		
+	</head>
+	
+	<style type="text/css">
+		#second{
+			width: 100%;
+			height: 650px;
+			display: none;
+			animation-name: name2;
+			animation-duration: 0.1s;
+		}
+		
+		@keyframes name1{
+			from{background-color: floralwhite;}
+			to{background-color: white;}
+		}
+		
+		.s_img1{
+			z-index: -1;
+			position: absolute;
+			width: 100%;
+		}
+		.s_img2{
+			position: absolute;
+			width: 10%;
+		}
+		.s_img3{
+			position: absolute;
+			margin-left: 90%;
+			width: 10%;
+		}
+		
+		#s_div3{
+			z-index: 1;
+			position: absolute;
+			width: 80%;
+			margin-left: 10%;
+			margin-top: 25%;
+		}
+		
+		#s_div3 video{
+			border-radius: 20px;
+		}
+		
+		#hk{
+			position: absolute;
+			width: 100%;
+		}
+		
+		#hk .hua{
+			z-index: 1;
+			position: absolute;
+			width: 100%;
+			height: 20%;
+		}
+		
+		#hk .hua img{
+			width: 80%;
+			margin-top: 145%;
+			margin-left: 10%;
+		}
+		
+		.shou{
+			position: absolute;
+			z-index: 3;
+			width: 16%;
+			margin-top: 160%;
+			margin-left: 17%;
+			animation-name: page2_kf2;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease;
+		}
+		.shou img{
+			width: 100%;
+		}
+		
+		@keyframes page2_kf2{
+			from{margin-left: 17%;}
+			to{margin-left: 80%;}
+		}
+		
+	</style>
+
+	<body>
+		
+		<div id="first">
+			<img class="img1" src="img/底图.png" />
+			
+			<img class="img2" src="img/关闭按钮.png" />
+			
+			<div class="top_font">
+				Gender Swap
+			</div>
+			
+			<div id="div1">
+				<video width="100%" autoplay="autoplay" loop="loop">
+				  <source src="video/白人男女-810-1140.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
+			</div>
+			
+			<div id="div2">
+				<div class="btn">
+					<button class="btn1" onclick="divSW()">
+						Take Photos
+					</button>
+				</div>
+			</div>
+		</div>
+		
+		<div id="second">
+			<img class="s_img1" src="img/底图.png" />
+			
+			<img class="s_img2" src="img/返回.png" />
+			<img class="s_img3" src="img/关闭按钮.png" />
+			
+			<div id="s_div3">
+				<video width="100%" autoplay="autoplay" loop="loop">
+				  <source src="video/黑人男女-810-1140.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
+			</div>
+			
+			<div class="shou">
+				<img src="img/手指.png" />
+			</div>
+			
+			<div id="hk">
+				<div class="hua">
+					<img src="img/男女/男女.png" />
+				</div>
+			</div>
+
+		</div>
+		
+	</body>
+	
+	<script type="text/javascript">
+		function divSW() {
+			var dv1 = document.getElementById( "first" );
+			var dv2 = document.getElementById( "second" );
+			var hide = true;
+		    if( hide ) {
+		       dv1.style.display = "none"; 
+			   dv2.style.display = "block";
+		       hide = false;
+		    } else {
+		        dv1.style.display = "block";
+				dv2.style.display = "none"; 
+		        hide = true;
+		    }
+			dv2.style.animationName="name1";
+		}
+		
+		
+
+	</script>
+</html>
