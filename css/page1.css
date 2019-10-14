@@ -1,8 +1,3 @@
-html,body,div{
-	border: 0;
-	padding: 0;
-	margin: 0;
-}
 #first{
 	width: 100%;
 	height: 12.5rem;
@@ -44,7 +39,7 @@ html,body,div{
 	z-index: 1;
 	position: absolute;
 	width: 100%;
-	height: 30%;
+	height: 40%;
 	margin-top: 140%;
 	
 	background: url(../img/按钮/拍照按钮循环-21/按钮循环_00000.png) no-repeat;
