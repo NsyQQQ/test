@@ -24,7 +24,7 @@ html,body,div{
 	height: 15%;
 	border: 0;
 	color: #FFDA00;
-	font-size: 36px;
+	font-size: 0.625rem;
 	font-family: Roboto-Black;
 	text-align: center;
 	padding-top: 10%;
@@ -46,46 +46,54 @@ html,body,div{
 	width: 100%;
 	height: 20%;
 	margin-top: 140%;
+	
+	background: url(../img/按钮/拍照按钮循环-21/下载按钮循环_00000.png) no-repeat;
+	background-size: 100%;
+	animation-name: page1_kf1;
+	animation-duration: 1.2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
 }
 .btn1{
 	position: absolute;
-	background: url(../img/xhan/按钮循环_00000.png) no-repeat;
-	background-size: cover;
-	width: 100%;
-	height: 100%;
-	border: 0;
-
-	font-size: 22px;
+	font-size: 0.375rem;
 	color: white;
-	padding-left: 20%;
-	padding-bottom: 7%;
+	width: 80%;
+	text-align: center;
+	margin-top: 9%;
+	margin-left: 18%;
 
-	animation-name: page1_kf1;
+	animation-name: page1_kf2;
 	animation-duration: 1.2s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
 
 @keyframes page1_kf1{
-	0%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00000.png) no-repeat;background-size: cover;}
-	5%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00001.png) no-repeat;background-size: cover;}
-	10%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00002.png) no-repeat;background-size: cover;}
-	15%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00003.png) no-repeat;background-size: cover;}
-	20%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00004.png) no-repeat;background-size: cover;font-size: 22px;}
-	25%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00005.png) no-repeat;background-size: cover;}
-	30%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00006.png) no-repeat;background-size: cover;}
-	35%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00007.png) no-repeat;background-size: cover;font-size: 18px;}
-	40%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00008.png) no-repeat;background-size: cover;}
-	45%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00009.png) no-repeat;background-size: cover;}
-	50%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00010.png) no-repeat;background-size: cover;font-size: 22px;}
-	55%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00011.png) no-repeat;background-size: cover;}
-	60%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00012.png) no-repeat;background-size: cover;}
-	65%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00013.png) no-repeat;background-size: cover;}
-	70%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00014.png) no-repeat;background-size: cover;}
-	75%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00015.png) no-repeat;background-size: cover;}
-	80%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00016.png) no-repeat;background-size: cover;}
-	85%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00017.png) no-repeat;background-size: cover;}
-	90%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00018.png) no-repeat;background-size: cover;}
-	95%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00019.png) no-repeat;background-size: cover;}
-	100%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00020.png) no-repeat;background-size: cover;}
+	0%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00000.png) no-repeat;background-size: 100%;}
+	5%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00001.png) no-repeat;background-size: 100%;}
+	10%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00002.png) no-repeat;background-size: 100%;}
+	15%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00003.png) no-repeat;background-size: 100%;}
+	20%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00004.png) no-repeat;background-size: 100%;}
+	25%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00005.png) no-repeat;background-size: 100%;}
+	30%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00006.png) no-repeat;background-size: 100%;}
+	35%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00007.png) no-repeat;background-size: 100%;}
+	40%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00008.png) no-repeat;background-size: 100%;}
+	45%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00009.png) no-repeat;background-size: 100%;}
+	50%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00010.png) no-repeat;background-size: 100%;}
+	55%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00011.png) no-repeat;background-size: 100%;}
+	60%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00012.png) no-repeat;background-size: 100%;}
+	65%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00013.png) no-repeat;background-size: 100%;}
+	70%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00014.png) no-repeat;background-size: 100%;}
+	75%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00015.png) no-repeat;background-size: 100%;}
+	80%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00016.png) no-repeat;background-size: 100%;}
+	85%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00017.png) no-repeat;background-size: 100%;}
+	90%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00018.png) no-repeat;background-size: 100%;}
+	95%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00019.png) no-repeat;background-size: 100%;}
+	100%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00020.png) no-repeat;background-size: 100%;}
+}
+@keyframes page1_kf2{
+	20%{font-size: 0.375rem;}
+	35%{font-size: 0.3125rem;}
+	50%{font-size: 0.375rem;}
 }

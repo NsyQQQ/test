@@ -95,7 +95,7 @@
 		.progress{
 			display: inline-block;
 			width: 80%;
-			height: 4.125rem;
+			height: 1.127rem;
 			background-image: url(../img/男女/男女.png);
 			background-repeat: no-repeat;
 			background-size: 100%;
@@ -106,7 +106,7 @@
 			display: inline-block;
 			background-image: url(../img/男女/黑男青年.ai.png);
 			background-size: cover;
-			height: 4.125rem;
+			height: 1.127rem;
 			width: 22%;
-			border-radius: 4.125rem;
+			border-radius: 1.127rem;
 		}
