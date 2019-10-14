@@ -142,7 +142,7 @@
 			<img class="t_img2" onclick="divSW3()" src="img/返回.png" />
 			
 			<div class="t_video">
-				<video id="t_video" width="100%" loop="loop" x5-playsinline="" playsinline="" webkit-playsinline="" poster="" x-webkit-airplay="allow" preload="auto">
+				<video id="t_video" width="100%" muted="muted" loop="loop" x5-playsinline="" playsinline="" webkit-playsinline="" poster="" x-webkit-airplay="allow" preload="auto">
 				  <source src="video/黑人男女-对比循环.mp4" type="video/mp4">
 				</video>
 			</div>
@@ -185,6 +185,17 @@
 			//播放闪屏动画
 			dv2.style.animationName="name1";
 			
+			setTimeout(function(){
+				var currentTime = v.video.currentTime;
+				var duration = v.video.duration;
+				var percent = currentTime / duration * 100;
+				v.video.play();
+				if(percent=0.5){
+					v.video.pause();
+				}
+			},500);
+			
+			
 			//过5秒钟之后视频自动播放
 			setTimeout(function(){
 				//手指消失
@@ -210,7 +221,7 @@
 					var video_3=document.getElementById("t_video");
 					video_3.play();
 				});
-			},5000);
+			},10000);
 		}
 		//第二个页面返回第一个页面
 		function divSW2() {
@@ -272,7 +283,7 @@
 				//手指触摸  按下手指时
 			    v.progress.ontouchstart = function(e) {
 			        progressDrag = true;
-			        updateprogress(e.touches[0].pageX/* - v.warp.offsetLeft */);
+			        updateprogress(e.touches[0].pageX);
 			    }
 				//手指触摸  松开手指时
 			    document.ontouchend = function(e) {
@@ -307,7 +318,7 @@
 				//手指触摸  移动手指时
 			    v.progress.ontouchmove = function(e) {
 			        if(progressDrag) {
-			            updateprogress(e.touches[0].pageX /* - v.warp.offsetLeft */);
+			            updateprogress(e.touches[0].pageX);
 			        }
 			    }
 			};
