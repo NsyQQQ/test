@@ -79,10 +79,6 @@
 			from{margin-left: 17%;}
 			to{margin-left: 80%;}
 		}
-		
-		video::-webkit-media-controls{
-		    display:none !important;
-		}
 
 		.video_1{
 			width: 80%;
