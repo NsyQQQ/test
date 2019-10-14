@@ -80,10 +80,6 @@
 			to{margin-left: 80%;}
 		}
 		
-		video::-webkit-media-controls{
-		    display:none !important;
-		}
-
 		.video_1{
 			width: 80%;
 			margin-left: 10%;
