@@ -18,21 +18,22 @@
 			margin: 0;
 		}
 	</style>
+	
 	<script type="text/javascript">
-	    function resize(){
-	        var docEl = document.documentElement;
-	        var clientWidth = window.innerWidth;
-	        if(clientWidth <= 320){
-	            docEl.style.fontSize = '50px';
-	        }else if(clientWidth >= 640){
-	            docEl.style.fontSize = '100px';
-	        }else{
-	            docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
-	        }
-	    }
-	   //解决加载时放大后再缩小
-	   resize();
+		function resize(){
+				var docEl = document.documentElement;
+				var clientWidth = window.innerWidth;
+				if(clientWidth <= 320){
+					docEl.style.fontSize = '50px';
+				}else if(clientWidth >= 640){
+					docEl.style.fontSize = '100px';
+				}else{
+					docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+				}
+			}
+		resize();
 	</script>
+	
 	<body>
 		
 		<!-- 第一个页面 -->
@@ -105,7 +106,7 @@
 	
 		window.onload=function(){
 			//自适应字体大小
-			document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px';
+			/* document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px'; */
 			document.body.style.fontSize = '16px';
 			//页面加载后一秒自动播放视频
 			setTimeout(function(){
