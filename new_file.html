@@ -18,7 +18,21 @@
 			margin: 0;
 		}
 	</style>
-	
+	<script type="text/javascript">
+	    function resize(){
+	        var docEl = document.documentElement;
+	        var clientWidth = window.innerWidth;
+	        if(clientWidth <= 320){
+	            docEl.style.fontSize = '50px';
+	        }else if(clientWidth >= 640){
+	            docEl.style.fontSize = '100px';
+	        }else{
+	            docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+	        }
+	    }
+	   //解决加载时放大后再缩小
+	   resize();
+	</script>
 	<body>
 		
 		<!-- 第一个页面 -->
