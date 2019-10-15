@@ -26,7 +26,7 @@
 			//播放闪屏动画
 			dv2.style.animationName="name1";
 			
-			setTimeout(function(){
+			/* setTimeout(function(){
 				var currentTime = v.video.currentTime;
 				var duration = v.video.duration;
 				var percent = currentTime / duration * 100;
@@ -34,7 +34,7 @@
 				if(percent=0.5){
 					v.video.pause();
 				}
-			},500);
+			},500); */
 			
 			//过5秒钟之后视频自动播放
 			setTimeout(function(){
