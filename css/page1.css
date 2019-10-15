@@ -65,12 +65,12 @@
 	animation-timing-function: linear;
 }
 
-@keyframes page1_kf2{
+/* @keyframes page1_kf2{
 	0%{transform: scale(1,1);}
 	20%{transform: scale(1,1);}
 	35%{transform: scale(0.85,0.85);}
 	50%{transform: scale(1,1);}
-	100%{transform: scale(1,1);}
+	100%{transform: scale(1,1);} */
 }
 @keyframes page1_kf1{
 	0%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00000.png) no-repeat;background-size: 100%;}
