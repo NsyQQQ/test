@@ -65,12 +65,12 @@
 	animation-timing-function: linear;
 }
 
-/* @keyframes page1_kf2{
+@keyframes page1_kf2{
 	0%{transform: scale(1,1);}
 	20%{transform: scale(1,1);}
 	35%{transform: scale(0.85,0.85);}
 	50%{transform: scale(1,1);}
-	100%{transform: scale(1,1);} */
+	100%{transform: scale(1,1);}
 }
 @keyframes page1_kf1{
 	0%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00000.png) no-repeat;background-size: 100%;}
@@ -96,7 +96,7 @@
 	100%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00020.png) no-repeat;background-size: 100%;}
 }
 
-@keyframes page1_kf3{
+/* @keyframes page1_kf3{
 	0%{background: url(../img/按钮/1/按钮循环_00000.png) no-repeat;background-size: 100%;}
 	5%{background: url(../img/按钮/1/按钮循环_00001.png) no-repeat;background-size: 100%;}
 	10%{background: url(../img/按钮/1/按钮循环_00002.png) no-repeat;background-size: 100%;}
@@ -119,3 +119,18 @@
 	95%{background: url(../img/按钮/1/按钮循环_00019.png) no-repeat;background-size: 100%;}
 	100%{background: url(../img/按钮/1/按钮循环_00020.png) no-repeat;background-size: 100%;}
 }
+ */
+
+@keyframes page1_kf3{
+			0%{background: url(../img/按钮/下载按钮循环-11/下载按钮循环_00000.png) no-repeat;background-size: 100%;}
+			10%{background: url(../img/按钮/下载按钮循环-11/下载按钮循环_00001.png) no-repeat;background-size: 100%;}
+			20%{background: url(../img/按钮/下载按钮循环-11/下载按钮循环_00002.png) no-repeat;background-size: 100%;}
+			30%{background: url(../img/按钮/下载按钮循环-11/下载按钮循环_00003.png) no-repeat;background-size: 100%;}
+			40%{background: url(../img/按钮/下载按钮循环-11/下载按钮循环_00004.png) no-repeat;background-size: 100%;}
+			50%{background: url(../img/按钮/下载按钮循环-11/下载按钮循环_00005.png) no-repeat;background-size: 100%;}
+			60%{background: url(../img/按钮/下载按钮循环-11/下载按钮循环_00006.png) no-repeat;background-size: 100%;}
+			70%{background: url(../img/按钮/下载按钮循环-11/下载按钮循环_00007.png) no-repeat;background-size: 100%;}
+			80%{background: url(../img/按钮/下载按钮循环-11/下载按钮循环_00008.png) no-repeat;background-size: 100%;}
+			95%{background: url(../img/按钮/下载按钮循环-11/下载按钮循环_00009.png) no-repeat;background-size: 100%;}
+			100%{background: url(../img/按钮/下载按钮循环-11/下载按钮循环_00010.png) no-repeat;background-size: 100%;}
+		}
