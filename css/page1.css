@@ -9,7 +9,6 @@
 }
 .f_img2{
 	position: absolute;
-	margin-left: 90%;
 	width: 10%;
 }
 .top_font{
@@ -50,7 +49,6 @@
 	animation-duration: 1.2s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
-	animation-fill-mode: both;
 }
 .btn{
 	z-index: 1;
@@ -65,7 +63,7 @@
 	animation-duration: 1.2s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
-	animation-fill-mode: both;
+	animation-fill-mode: forwards;
 }
 
 @keyframes page1_kf2{
