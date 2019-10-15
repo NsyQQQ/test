@@ -102,8 +102,6 @@
 				dv3.style.display = "block"; 
 		        hide = true;
 		    }
-			document.getElementById("t_btn").style.animationName="page1_kf";
-			document.getElementById("t_font").style.animationName="page1_kf";
 		}
 			
 		/* 进度条控制视频播放 自定义进度条 进度条可拖拽 */
