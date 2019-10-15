@@ -93,8 +93,8 @@
 				</video>
 			</div>
 	
-			<div class="t_btn">
-				<div class="t_font">
+			<div class="t_btn" id="t_btn">
+				<div class="t_font" id="t_font">
 					Download Now
 				</div>
 			</div>
@@ -108,7 +108,7 @@
 			//自适应字体大小
 			/* document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px'; */
 			/* document.body.style.fontSize = '16px'; */
-			//页面加载后一秒自动播放视频
+			//页面加载后一秒自动播放第一个视频
 			setTimeout(function(){
 				var video_1=document.getElementById("f_video");
 				video_1.play();
@@ -199,6 +199,8 @@
 				dv3.style.display = "block"; 
 		        hide = true;
 		    }
+			document.getElementById("t_btn").style.animationName=" ";
+			document.getElementById("t_font").style.animationName=" ";
 		}
 			
 		/* 进度条控制视频播放 自定义进度条 进度条可拖拽 */
