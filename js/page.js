@@ -6,6 +6,9 @@
 			setTimeout(function(){
 				var video_1=document.getElementById("f_video");
 				video_1.play();
+				
+				document.getElementById("f_btn").style.animationName="page1_kf1";
+				document.getElementById("f_btn1").style.animationName="page1_kf2";
 			},1000);
 		}
 		
@@ -25,6 +28,7 @@
 		    }
 			//播放闪屏动画
 			dv2.style.animationName="name1";
+			document.getElementById("shou").style.animationName="page2_kf2";
 			
 			setTimeout(function(){
 				var currentTime = v.video.currentTime;
