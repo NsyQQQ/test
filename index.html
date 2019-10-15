@@ -2,166 +2,106 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
 		<title></title>
 		
 		<link rel="stylesheet" href="css/page1.css" />
-		
+		<link rel="stylesheet" href="css/page2.css" />
+		<link rel="stylesheet" href="css/page3.css" />
+	
 	</head>
 	
 	<style type="text/css">
-		#second{
-			width: 100%;
-			height: 650px;
-			display: none;
-			animation-name: name2;
-			animation-duration: 0.1s;
+		html,body,div{
+			border: 0;
+			padding: 0;
+			margin: 0;
 		}
-		
-		@keyframes name1{
-			from{background-color: floralwhite;}
-			to{background-color: white;}
-		}
-		
-		.s_img1{
-			z-index: -1;
-			position: absolute;
-			width: 100%;
-		}
-		.s_img2{
-			position: absolute;
-			width: 10%;
-		}
-		.s_img3{
-			position: absolute;
-			margin-left: 90%;
-			width: 10%;
-		}
-		
-		#s_div3{
-			z-index: 1;
-			position: absolute;
-			width: 80%;
-			margin-left: 10%;
-			margin-top: 25%;
-		}
-		
-		#s_div3 video{
-			border-radius: 20px;
-		}
-		
-		#hk{
-			position: absolute;
-			width: 100%;
-		}
-		
-		#hk .hua{
-			z-index: 1;
-			position: absolute;
-			width: 100%;
-			height: 20%;
-		}
-		
-		#hk .hua img{
-			width: 80%;
-			margin-top: 145%;
-			margin-left: 10%;
-		}
-		
-		.shou{
-			position: absolute;
-			z-index: 3;
-			width: 16%;
-			margin-top: 160%;
-			margin-left: 17%;
-			animation-name: page2_kf2;
-			animation-duration: 2s;
-			animation-iteration-count: infinite;
-			animation-timing-function: ease;
-		}
-		.shou img{
-			width: 100%;
-		}
-		
-		@keyframes page2_kf2{
-			from{margin-left: 17%;}
-			to{margin-left: 80%;}
-		}
-		
 	</style>
-
+	
+	<script type="text/javascript">
+		function resize(){
+				var docEl = document.documentElement;
+				var clientWidth = window.innerWidth;
+				if(clientWidth <= 320){
+					docEl.style.fontSize = '50px';
+				}else if(clientWidth >= 640){
+					docEl.style.fontSize = '100px';
+				}else{
+					docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+				}
+			}
+		resize();
+	</script>
+	
 	<body>
 		
+		<!-- 第一个页面 -->
 		<div id="first">
-			<img class="img1" src="img/底图.png" />
-			
-			<img class="img2" src="img/关闭按钮.png" />
-			
+			<!-- 背景图片 -->
+			<img class="f_img1" src="img/底图.png" />
+			<!-- 返回按钮 -->
+			<img class="f_img2" src="img/返回.png" />
+			<!-- 顶部文字 -->
 			<div class="top_font">
 				Gender Swap
 			</div>
-			
+			<!-- 中部视频 -->
 			<div id="div1">
-				<video width="100%" autoplay="autoplay" loop="loop">
+				<video id="f_video" width="100%" muted="muted" loop="loop" x5-playsinline="" playsinline="" webkit-playsinline="" poster="" x-webkit-airplay="allow" preload="auto">
 				  <source src="video/白人男女-810-1140.mp4" type="video/mp4">
-				Your browser does not support the video tag.
 				</video>
 			</div>
-			
-			<div id="div2">
-				<div class="btn">
-					<button class="btn1" onclick="divSW()">
-						Take Photos
-					</button>
-				</div>
+			<!-- 底部按钮 -->
+			<div class="btn1" id="f_btn1" onclick="divSW1()">
+				Take Photos
 			</div>
+			<div class="btn" id="f_btn"></div>
+			
 		</div>
 		
-		<div id="second">
+		<!-- 第二个页面 -->
+		<div id="second" id="video-warp">
+			<!-- 背景图片 -->
 			<img class="s_img1" src="img/底图.png" />
-			
-			<img class="s_img2" src="img/返回.png" />
-			<img class="s_img3" src="img/关闭按钮.png" />
-			
-			<div id="s_div3">
-				<video width="100%" autoplay="autoplay" loop="loop">
-				  <source src="video/黑人男女-810-1140.mp4" type="video/mp4">
-				Your browser does not support the video tag.
+			<!-- 返回按钮 -->
+			<img class="s_img2" onclick="divSW2()" src="img/返回.png" />
+			<!-- 视频 -->
+			<div class="video_1">
+				<video id="video" width="100%" x5-playsinline="" playsinline="" webkit-playsinline="" poster="" x-webkit-airplay="allow" preload="auto">
+					<source src="video/黑人男女-810-1140.mp4" type="video/mp4"></source>
 				</video>
 			</div>
-			
-			<div class="shou">
+			<!-- 手指 -->
+			<div class="shou" id="shou">
 				<img src="img/手指.png" />
 			</div>
+			<!-- 滑块 -->
+			<div class="progress">
+				<div class="timrBar"></div>
+			</div>
+		</div>
+
+		<!-- 第三个页面 -->
+		<div id="third">
+			<img class="t_img1" src="img/底图.png" />
+			<img class="t_img2" onclick="divSW3()" src="img/返回.png" />
 			
-			<div id="hk">
-				<div class="hua">
-					<img src="img/男女/男女.png" />
+			<div class="t_video">
+				<video id="t_video" width="100%" muted="muted" loop="loop" x5-playsinline="" playsinline="" webkit-playsinline="" poster="" x-webkit-airplay="allow" preload="auto">
+				  <source src="video/黑人男女-对比循环.mp4" type="video/mp4">
+				</video>
+			</div>
+	
+			<div class="t_btn" id="t_btn">
+				<div class="t_font" id="t_font">
+					Download Now
 				</div>
 			</div>
-
 		</div>
-		
+	
 	</body>
 	
-	<script type="text/javascript">
-		function divSW() {
-			var dv1 = document.getElementById( "first" );
-			var dv2 = document.getElementById( "second" );
-			var hide = true;
-		    if( hide ) {
-		       dv1.style.display = "none"; 
-			   dv2.style.display = "block";
-		       hide = false;
-		    } else {
-		        dv1.style.display = "block";
-				dv2.style.display = "none"; 
-		        hide = true;
-		    }
-			dv2.style.animationName="name1";
-		}
-		
-		
-
-	</script>
+	<script src="js/page.js"></script>
+	
 </html>
