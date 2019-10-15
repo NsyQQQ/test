@@ -77,7 +77,6 @@
 				dv2.style.display = "block"; 
 		        hide = true;
 		    }
-			document.getElementById("f_btn").style.animationName="page1_kf3";
 		}
 		//第三个页面返回第二个页面
 		function divSW3() {
