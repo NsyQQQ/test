@@ -43,7 +43,6 @@
 				}
 			},500);
 			
-			
 			//过5秒钟之后视频自动播放
 			setTimeout(function(){
 				//手指消失
@@ -85,11 +84,9 @@
 				dv2.style.display = "block"; 
 		        hide = true;
 		    }
-			setTimeout(function(){
-				document.getElementById("f_btn").style.background="url(../img/按钮/1/按钮循环_00000.png) no-repeat";
+			document.getElementById("f_btn").style.background="url(../img/按钮/1/按钮循环_00000.png) no-repeat";
 			document.getElementById("f_btn").style.animationName="page1_kf3";
 			document.getElementById("f_btn1").style.animationName="page1_kf2";
-			},1000);
 			document.getElementById("shou").style.animationName="page2_kf";
 			document.getElementById("shou").style.display="none";
 		}
