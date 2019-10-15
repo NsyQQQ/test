@@ -40,9 +40,9 @@
 	z-index: 2;
 	position: absolute;
 	color: white;
-	width: 80%;
+	width: 50%;
 	text-align: center;
-	margin-left: 18%;
+	margin-left: 32%;
 	margin-top: 149%;
 	
 	font-size: 0.375rem;
@@ -69,11 +69,11 @@
 }
 
 @keyframes page1_kf2{
-	0%{color: white;}
-	20%{color: black;}
-	35%{color: white;}
-	50%{color: black;}
-	100%{color: white;}
+	0%{color: white;transform: scale(1,1);}
+	20%{color: black;transform: scale(1,1);}
+	35%{color: white;transform: scale(0.8,0.8);}
+	50%{color: black;transform: scale(1,1);}
+	100%{color: white;transform: scale(1,1);}
 }
 @keyframes page1_kf1{
 	0%{background: url(../img/按钮/拍照按钮循环-21/按钮循环_00000.png) no-repeat;background-size: 100%;}
