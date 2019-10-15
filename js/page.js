@@ -29,6 +29,7 @@
 			//播放闪屏动画
 			dv2.style.animationName="name1";
 			document.getElementById("shou").style.animationName="page2_kf2";
+			document.getElementById("shou").style.display="block";
 			document.getElementById("f_btn").style.animationName="page1_kf";
 			document.getElementById("f_btn1").style.animationName="page1_kf";
 			
@@ -87,6 +88,7 @@
 			document.getElementById("f_btn").style.animationName="page1_kf3";
 			document.getElementById("f_btn1").style.animationName="page1_kf2";
 			document.getElementById("shou").style.animationName="page2_kf";
+			document.getElementById("shou").style.display="none";
 		}
 		//第三个页面返回第二个页面
 		function divSW3() {
@@ -102,6 +104,8 @@
 				dv3.style.display = "block"; 
 		        hide = true;
 		    }
+			document.getElementById("shou").style.animationName="page2_kf2";
+			document.getElementById("shou").style.display="block";
 		}
 			
 		/* 进度条控制视频播放 自定义进度条 进度条可拖拽 */
