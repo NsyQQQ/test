@@ -86,6 +86,7 @@
 		    }
 			document.getElementById("f_btn").style.animationName="page1_kf1";
 			document.getElementById("f_btn1").style.animationName="page1_kf2";
+			document.getElementById("shou").style.animationName="page2_kf";
 		}
 		//第三个页面返回第二个页面
 		function divSW3() {
@@ -101,6 +102,8 @@
 				dv3.style.display = "block"; 
 		        hide = true;
 		    }
+			document.getElementById("t_btn").style.animationName="page1_kf";
+			document.getElementById("t_font").style.animationName="page1_kf";
 		}
 			
 		/* 进度条控制视频播放 自定义进度条 进度条可拖拽 */
