@@ -84,7 +84,6 @@
 				dv2.style.display = "block"; 
 		        hide = true;
 		    }
-			document.getElementById("f_btn").style.background="url(../img/按钮/1/按钮循环_00000.png) no-repeat";
 			document.getElementById("f_btn").style.animationName="page1_kf3";
 			document.getElementById("f_btn1").style.animationName="page1_kf2";
 			document.getElementById("shou").style.animationName="page2_kf";

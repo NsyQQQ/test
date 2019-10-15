@@ -32,7 +32,7 @@
 			background: url(../img/按钮/下载按钮循环-11/下载按钮循环_00000.png) no-repeat;
 			background-size: 100%;
 
-			animation-name: page3_kf;
+			animation-name: page3_kf1;
 			animation-duration: 1.2s;
 			animation-iteration-count: infinite;
 			animation-timing-function: linear;
@@ -43,7 +43,7 @@
 			margin-top: 9%;
 			color: white;
 			
-			animation-name: page3_kf;
+			animation-name: page3_kf2;
 			animation-duration: 1.2s;
 			animation-iteration-count: infinite;
 			animation-timing-function: linear;
