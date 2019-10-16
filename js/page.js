@@ -159,7 +159,7 @@
 							v.video.pause();
 							var video_3=document.getElementById("t_video");
 							video_3.play();
-							clearTimeout(divSW1().time1);
+							/* clearTimeout(divSW1().time1); */
 						}else{
 							v.timrBar.style.transform="translateX(0%)";
 							v.video.currentTime=0;

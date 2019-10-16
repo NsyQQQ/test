@@ -1,6 +1,6 @@
 		#second{
 			width: 100%;
-			/* height: 650px; */
+			height: 100%;
 			display: none;
 			animation-name: name2;
 			animation-duration: 0.1s;
