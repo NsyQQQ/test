@@ -36,32 +36,9 @@
 				}
 			},500);
 			
-			//过5秒钟之后视频自动播放
-			setTimeout(function(){
-				//手指消失
-				var shou=document.getElementById("shou");
-				shou.style.display = "none";
-				//播放视频
-				v.video.play();
-				//视频播放完之后跳转到下一个页面
-				v.video.addEventListener("ended",function(){
-					var dv2 = document.getElementById( "second" );
-					var dv3 = document.getElementById( "third" );
-					var hide = true;
-					if( hide ) {
-					   dv2.style.display = "none"; 
-					   dv3.style.display = "block";
-					   hide = false;
-					} else {
-					    dv2.style.display = "block";
-						dv3.style.display = "none"; 
-					    hide = true;
-					}
-					//播放第三个视频
-					var video_3=document.getElementById("t_video");
-					video_3.play();
-				});
-			},6000);
+			
+
+			
 		}
 		//第二个页面返回第一个页面
 		function divSW2() {
@@ -104,6 +81,34 @@
 		};
 		
 		v.video.onloadedmetadata = function(){
+			
+			//过5秒钟之后视频自动播放
+			var time1=window.setTimeout(function(){
+				//手指消失
+				var shou=document.getElementById("shou");
+				shou.style.display = "none";
+				//播放视频
+				v.video.play();
+				//视频播放完之后跳转到下一个页面
+				v.video.addEventListener("ended",function(){
+					var dv2 = document.getElementById( "second" );
+					var dv3 = document.getElementById( "third" );
+					var hide = true;
+					if( hide ) {
+					   dv2.style.display = "none"; 
+					   dv3.style.display = "block";
+					   hide = false;
+					} else {
+					    dv2.style.display = "block";
+						dv3.style.display = "none"; 
+					    hide = true;
+					}
+					//播放第三个视频
+					var video_3=document.getElementById("t_video");
+					video_3.play();
+				});
+			},5000);
+			
 			//进度条跟随
 			v.video.ontimeupdate = function() {
 				//获取视频当前播放时间
@@ -150,6 +155,7 @@
 							v.video.pause();
 							var video_3=document.getElementById("t_video");
 							video_3.play();
+							clearTimeout(time1);
 						}else{
 							v.timrBar.style.transform="translateX(0%)";
 							v.video.currentTime=0;
