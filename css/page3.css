@@ -1,7 +1,8 @@
 		#third{
 			display: none;
 			width: 100%;
-			height: 650px;
+			/* height: 650px; */
+			position: absolute;
 		}
 		.t_img1{
 			z-index: -1;
@@ -27,7 +28,7 @@
 			z-index: 1;
 			position: absolute;
 			width: 100%;
-			height: 20%;
+			height: 100px;
 			margin-top: 140%;
 			background: url(../img/按钮/下载按钮循环-11/下载按钮循环_00000.png) no-repeat;
 			background-size: 100%;

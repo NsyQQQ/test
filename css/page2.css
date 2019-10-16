@@ -1,9 +1,10 @@
 		#second{
 			width: 100%;
-			height: 650px;
+			/* height: 650px; */
 			display: none;
 			animation-name: name2;
 			animation-duration: 0.1s;
+			position: absolute;
 		}
 		
 		@keyframes name1{
