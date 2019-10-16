@@ -13,7 +13,7 @@
 		function divSW1() {
 			var dv1 = document.getElementById( "first" );
 			var dv2 = document.getElementById( "second" );
-			var hide = true;
+			/* var hide = true;
 		    if( hide ) {
 		       dv1.style.display = "none"; 
 			   dv2.style.display = "block";
@@ -22,7 +22,9 @@
 		        dv1.style.display = "block";
 				dv2.style.display = "none"; 
 		        hide = true;
-		    }
+		    } */
+			dv1.style.left="2000px";
+			dv2.style.left="0";
 			//播放闪屏动画
 			dv2.style.animationName="name1";
 			
@@ -67,7 +69,7 @@
 		function divSW2() {
 			var dv1 = document.getElementById( "first" );
 			var dv2 = document.getElementById( "second" );
-			var hide = true;
+			/* var hide = true;
 		    if( hide ) {
 		       dv1.style.display = "block"; 
 			   dv2.style.display = "none";
@@ -76,7 +78,9 @@
 		        dv1.style.display = "none";
 				dv2.style.display = "block"; 
 		        hide = true;
-		    }
+		    } */
+			dv1.style.left="0";
+			dv2.style.left="2000px";
 		}
 		//第三个页面返回第二个页面
 		function divSW3() {
