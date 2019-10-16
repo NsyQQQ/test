@@ -91,15 +91,6 @@
 				dv3.style.display = "block"; 
 		        hide = true;
 		    }
-			setTimeout(function(){
-				var currentTime = v.video.currentTime;
-				var duration = v.video.duration;
-				var percent = currentTime / duration * 100;
-				v.video.play();
-				if(percent=0.5){
-					v.video.pause();
-				}
-			},500);
 		}
 			
 		/* 进度条控制视频播放 自定义进度条 进度条可拖拽 */
@@ -159,7 +150,6 @@
 							v.video.pause();
 							var video_3=document.getElementById("t_video");
 							video_3.play();
-							/* clearTimeout(divSW1().time1); */
 						}else{
 							v.timrBar.style.transform="translateX(0%)";
 							v.video.currentTime=0;
