@@ -53,7 +53,7 @@
 			<!-- 返回按钮 -->
 			<img class="f_img2" id="f_img2" src="" />
 			<!-- 顶部文字 -->
-			<div class="top_font">
+			<div class="top_font" id="f_font1">
 				Gender Swap
 			</div>
 			<!-- 中部视频 -->
@@ -150,14 +150,41 @@
 		function handleSize(){
 			if(window.innerWidth < window.innerHeight){
 				console.log("竖屏");
+				var dv1 = document.getElementById( "first" );
+				var dv2 = document.getElementById( "second" );
+				var dv3 = document.getElementById( "third" );
+				var f1 = document.getElementById("f_font1");
+				var f2 = document.getElementById("f_btn1");
+				dv1.style.width="100%";
+				dv1.style.height="100%";
+				dv1.style.marginLeft="0";
+				f1.style.fontSize="0.625rem";
+				f2.style.fontSize="0.375rem";
+				dv2.style.width="100%";
+				dv2.style.height="100%";
+				dv2.style.marginLeft="0";
+				dv3.style.width="100%";
+				dv3.style.height="100%";
+				dv3.style.marginLeft="0";
 			}else{
 				console.log("横屏");
 				var dv1 = document.getElementById( "first" );
 				var dv2 = document.getElementById( "second" );
 				var dv3 = document.getElementById( "third" );
+				var f1 = document.getElementById("f_font1");
+				var f2 = document.getElementById("f_btn1");
 				dv1.style.width="30%";
 				dv1.style.height="100%";
 				dv1.style.marginLeft="35%";
+				f1.style.fontSize="0.3rem";
+				f2.style.fontSize="0.2rem";
+				dv2.style.width="30%";
+				dv2.style.height="100%";
+				dv2.style.marginLeft="35%";
+				dv3.style.width="30%";
+				dv3.style.height="100%";
+				dv3.style.marginLeft="35%";
+				document.body.style.backgroundColor="blue";
 			}
 		}
 		window.onresize=function(event){
@@ -165,9 +192,6 @@
 		};
 		
 		window.onload=function(){
-			//自适应字体大小
-			/* document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px'; */
-			/* document.body.style.fontSize = '16px'; */
 			//页面加载后一秒自动播放第一个视频
 			setTimeout(function(){
 				var video_1=document.getElementById("f_video");
