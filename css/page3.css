@@ -1,0 +1,55 @@
+		#third{
+			display: none;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+		.t_img1{
+			z-index: -1;
+			position: absolute;
+			width: 100%;
+		}
+		.t_img2{
+			position: absolute;
+			width: 12%;
+			margin-left: 5%;
+			margin-top: 3%;
+		}
+		.t_video{
+			z-index: 1;
+			position: absolute;
+			width: 76%;
+			margin-left: 12%;
+			margin-top: 35%;
+		}
+		.t_video video{
+			border-radius: 20px;
+		}
+		
+		.t_btn{
+			z-index: 1;
+			position: absolute;
+			width: 100%;
+			height: 30%;
+			margin-top: 140%;
+			background: url(../img/gif/点击按钮.gif) no-repeat;
+			background-size: 100%;
+		}
+		.t_font{
+			text-align: center;
+			font-size: 0.375rem;
+			margin-top: 12%;
+			color: white;
+			
+			animation-name: page3_kf2;
+			animation-duration: 1.2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		
+		@keyframes page3_kf2{
+			0%{transform: scale(1,1);}
+			40%{transform: scale(1,1);}
+			70%{transform: scale(0.85,0.85);}
+			100%{transform: scale(1,1);}
+		}
