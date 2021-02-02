@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			/* @keyframes myfirst {
+				0% {
+					margin-left: 0px;
+					margin-top: 50px;
+				}
+
+				25% {
+					margin-left: 750px;
+					margin-top: 50px;
+				}
+
+				50% {
+					margin-left: 750px;
+					margin-top: 750px;
+				}
+
+				75% {
+					margin-left: 0px;
+					margin-top: 750px;
+				}
+
+				100% {
+					margin-left: 0px;
+					margin-top: 50px;
+				}
+			} */
+		</style>
+
+		<div id="app" style="width: 800px;height: 800px;border: 1px solid black;margin-left: 400px;margin-top: 50px;">
+			<button v-on:click="play" style="position: absolute;width: 100px;height: 50px;font-size: 18px;">开始游戏</button>
+			<h1 style="position: absolute;margin-top: 0px;margin-left: 250px;">是男人就撑过20秒</h1>
+		</div>
+
+		<script type="text/javascript">
+			for (let i = 0; i < 16; i++) {
+				for (let j = 1; j < 16; j++) {
+					let div = document.createElement("div");
+					div.style.width = "48px";
+					div.style.height = "48px";
+					div.style.border = "1px solid black";
+					div.style.marginTop = j * 50 + "px";
+					div.style.position = "absolute";
+					div.style.marginLeft = i * 50 + "px";
+					document.getElementById("app").appendChild(div);
+				}
+			}
+			var index = 0;
+			var start0;
+			var start1;
+			var start2;
+			var start3;
+			var start4;
+			var start5;
+			var start6;
+			var start7;
+			var start8;
+			var start9;
+			var app = new Vue({
+				el: '#app',
+				data: {
+					arr: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+					arr1: [start0, start1, start2, start3, start4, start5, start6, start7, start8, start9]
+				},
+				methods: {
+					play: function() {
+						this.arr.map((value) => {
+							let div = document.createElement("div");
+							div.id = value.toString();
+							div.style.border = "1px solid black";
+							div.style.backgroundColor = "red";
+							div.style.width = "48px";
+							div.style.height = "48px";
+							div.style.marginTop = "50px";
+							div.style.position = "absolute";
+							div.style.marginLeft = "0px";
+							// div.style.animation = "myfirst 8s linear " + value / 7.5 + "s infinite";
+							document.getElementById("app").appendChild(div);
+
+							let countX = 0;
+							let countY = 1;
+							this.arr1[value] = setInterval(function() {
+								let type;
+								let mar = Math.random();
+								if (mar > 0 && mar < 0.25) {
+									type = 1;
+								} else if (mar >= 0.25 && mar < 0.5) {
+									type = 2;
+								} else if (mar >= 0.5 && mar < 0.75) {
+									type = 3;
+								} else if (mar >= 0.75 && mar < 1) {
+									type = 4;
+								}
+								switch (type) {
+									case 1:
+										if (countX == 15) {
+											countX--;
+										} else {
+											countX++;
+										}
+										document.getElementById(value.toString()).style.marginLeft = countX * 50 + "px";
+										break;
+									case 2:
+										if (countX == 0) {
+											countX++;
+										} else {
+											countX--;
+										}
+										document.getElementById(value.toString()).style.marginLeft = countX * 50 + "px";
+										break;
+									case 3:
+										if (countY == 15) {
+											countY--;
+										} else {
+											countY++;
+										}
+										document.getElementById(value.toString()).style.marginTop = countY * 50 + "px";
+										break;
+									case 4:
+										if (countY == 1) {
+											countY++;
+										} else {
+											countY--;
+										}
+										document.getElementById(value.toString()).style.marginTop = countY * 50 + "px";
+										break;
+								}
+								let left1 = document.getElementById(value.toString()).style.marginLeft;
+								let top1 = document.getElementById(value.toString()).style.marginTop;
+								let left2 = document.getElementById("my").style.marginLeft;
+								let top2 = document.getElementById("my").style.marginTop;
+								if (left1 == left2 && top1 == top2) {
+									app.over();
+								}
+							}, 200);
+						});
+						let div = document.createElement("div");
+						div.id = "my";
+						div.style.border = "1px solid black";
+						div.style.backgroundColor = "black";
+						div.style.width = "48px";
+						div.style.height = "48px";
+						div.style.marginTop = "750px";
+						div.style.position = "absolute";
+						div.style.marginLeft = "750px";
+						document.getElementById("app").appendChild(div);
+						let countX = 15;
+						let countY = 15;
+						document.onkeydown = function(event) {
+							switch (event.keyCode) {
+								case 37:
+									if (countX > 0) {
+										countX--;
+									}
+									document.getElementById("my").style.marginLeft = countX * 50 + "px";
+									break;
+								case 38:
+									if (countY > 1) {
+										countY--;
+									}
+									document.getElementById("my").style.marginTop = countY * 50 + "px";
+									break;
+								case 39:
+									if (countX < 15) {
+										countX++;
+									}
+									document.getElementById("my").style.marginLeft = countX * 50 + "px";
+									break;
+								case 40:
+									if (countY < 15) {
+										countY++;
+									}
+									document.getElementById("my").style.marginTop = countY * 50 + "px";
+									break;
+							}
+						}
+					},
+					over: function() {
+						alert("游戏结束");
+						this.arr1.forEach((value) => {
+							clearInterval(value);
+						});
+						this.arr.map((value) => {
+							document.getElementById("app").removeChild(document.getElementById(value.toString()));
+						});
+						document.getElementById("app").removeChild(document.getElementById("my"));
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
